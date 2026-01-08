@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Faqeeha Javed 🎂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #ff6b9d;
+            --secondary-color: #c44569;
+            --accent-color: #ffa8c5;
+            --bg-light: #fff0f6;
+            --bg-dark: #1a0a14;
+            --text-light: #2d1b2e;
+            --text-dark: #ffd4e5;
+            --card-light: rgba(255, 255, 255, 0.95);
+            --card-dark: rgba(45, 27, 46, 0.95);
+            --shadow-light: rgba(255, 107, 157, 0.3);
+            --shadow-dark: rgba(255, 107, 157, 0.5);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            overflow-x: hidden;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        body.dark-mode .bg-animation {
+            background: linear-gradient(135deg, #1a0a14 0%, #2d1b2e 25%, #4a1942 50%, #6b2d5c 75%, #8b3a62 100%);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Hearts */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: var(--primary-color);
+            opacity: 0;
+            animation: floatHeart 8s infinite ease-in;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--card-light);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: var(--card-dark);
+            box-shadow: 0 8px 32px var(--shadow-dark);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 20px 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 6rem);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: titleGlow 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 107, 157, 0.5);
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        body.dark-mode .subtitle {
+            color: var(--accent-color);
+        }
+
+        .date-text {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-card {
+            background: var(--card-light);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px 30px;
+            box-shadow: 0 20px 60px var(--shadow-light);
+            border: 2px solid rgba(255, 107, 157, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        body.dark-mode .countdown-card {
+            background: var(--card-dark);
+            box-shadow: 0 20px 60px var(--shadow-dark);
+            border: 2px solid rgba(255, 168, 197, 0.3);
+        }
+
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        body.dark-mode .countdown-title {
+            color: var(--accent-color);
+        }
+
+        .countdown-timer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .time-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .time-box:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .time-number {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: white;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .time-label {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.95);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Messages Section */
+        .messages-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .message-card {
+            background: var(--card-light);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px var(--shadow-light);
+            border: 2px solid rgba(255, 107, 157, 0.2);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        body.dark-mode .message-card {
+            background: var(--card-dark);
+            box-shadow: 0 20px 60px var(--shadow-dark);
+            border: 2px solid rgba(255, 168, 197, 0.3);
+        }
+
+        .message-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .message-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .message-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 2;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .message-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2em;
+        }
+
+        body.dark-mode .message-highlight {
+            color: var(--accent-color);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gallery-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        body.dark-mode .gallery-title {
+            color: var(--accent-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: var(--card-light);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px var(--shadow-light);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 107, 157, 0.2);
+        }
+
+        body.dark-mode .gallery-item {
+            background: var(--card-dark);
+            box-shadow: 0 15px 40px var(--shadow-dark);
+            border: 2px solid rgba(255, 168, 197, 0.3);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 25px 60px var(--shadow-light);
+        }
+
+        body.dark-mode .gallery-item:hover {
+            box-shadow: 0 25px 60px var(--shadow-dark);
+        }
+
+        .gallery-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .gallery-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Wishes Section */
+        .wishes-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .wish-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 25px 70px rgba(255, 107, 157, 0.5);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wish-card::before {
+            content: '🎂';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wish-main {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .wish-sub {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            line-height: 2;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-heart {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Music Button */
+        .music-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.15) rotate(15deg);
+        }
+
+        .music-btn.playing {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5); }
+            50% { box-shadow: 0 10px 60px rgba(255, 107, 157, 0.8); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .countdown-timer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .theme-toggle, .music-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .message-card {
+                padding: 40px 25px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sparkles */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            animation: sparkleAnim 1s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes sparkleAnim {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <h1 class="main-title">Faqeeha Javed</h1>
+        <p class="subtitle">🎂 Happy Birthday Meri Jaan! 🎂</p>
+        <p class="date-text">28 January 2025</p>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="countdown-card">
+            <h2 class="countdown-title">Tumhare Special Day Mein ⏰</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="time-box">
+                    <span class="time-number" id="days">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="hours">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="minutes">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="seconds">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section class="messages-section">
+        <div class="message-card">
+            <div class="message-icon">💖</div>
+            <p class="message-text">
+                Meri pyari <span class="message-highlight">Faqeeha</span>, tumhari har muskurahat meri duniya roshan kar deti hai. 
+                Tumhare saath har pal khaas hai aur har din ek nayi khushi lata hai. ✨
+            </p>
+        </div>
+
+        <div class="message-card">
+            <div class="message-icon">🌟</div>
+            <p class="message-text">
+                Tum sirf meri zindagi nahi, meri <span class="message-highlight">khushiyon ka sabab</span> ho. 
+                Tumhare bina ye duniya adhoori lagti hai. Allah tumhe hamesha khush rakhe! 🤲
+            </p>
+        </div>
+
+        <div class="message-card">
+            <div class="message-icon">🎁</div>
+            <p class="message-text">
+                Is saal tumhara birthday pehle se bhi zyada <span class="message-highlight">khaas</span> hoga! 
+                Kyunki tum mere liye duniya ki sabse pyari ho. Happy Birthday in advance meri jaan! 🎉
+            </p>
+        </div>
+
+        <div class="message-card">
+            <div class="message-icon">🌹</div>
+            <p class="message-text">
+                Tumhari aankhon mein jo chamak hai, tumhari hansi mein jo meethas hai, 
+                wo sab kuch mere liye <span class="message-highlight">jannat se kam nahi</span>. 
+                I love you so much Faqeeha! ❤️
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2 class="gallery-title">Kya Hai Khaas Tumhare Baare Mein 💝</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-emoji">😊</div>
+                <p class="gallery-text">Tumhari smile duniya ki sabse haseen smile hai</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-emoji">💫</div>
+                <p class="gallery-text">Tumhari personality bilkul unique aur amazing hai</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-emoji">🌸</div>
+                <p class="gallery-text">Tumhari har ada mujhe pagal kar deti hai</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-emoji">✨</div>
+                <p class="gallery-text">Tum ho toh sab kuch perfect lagta hai</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-emoji">💕</div>
+                <p class="gallery-text">Tumhara pyar meri taqat hai</p>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-emoji">🎀</div>
+                <p class="gallery-text">Tum mere liye Allah ki sabse badi naimat ho</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Wishes -->
+    <section class="wishes-section">
+        <div class="wish-card">
+            <h2 class="wish-main">Happy Birthday Faqeeha Javed! 🎂</h2>
+            <p class="wish-sub">
+                Allah tumhe hamesha khush rakhe, tumhari har dua qabool kare, 
+                tumhari zindagi mein khushiyan hi khushiyan hon, 
+                aur tum hamesha aise hi muskurati raho! 
+                <br><br>
+                Tum meri jaan ho, meri duniya ho, aur meri sab kuch ho! 
+                <br>
+                I Love You So Much! 💖✨🎉
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-heart">❤️</div>
+        <p class="footer-text">Made with endless love for Faqeeha Javed 💝</p>
+        <p class="footer-text" style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">
+            © 2025 | Forever Yours 🌹
+        </p>
+    </footer>
+
+    <!-- Music Button -->
+    <button class="music-btn" id="musicBtn" aria-label="Toggle Music">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const birthday = new Date('2025-01-28T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = birthday - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                document.querySelector('.countdown-title').textContent = '🎉 Happy Birthday Faqeeha! 🎉';
+                document.getElementById('countdown').innerHTML = '<div style="font-size: 3rem; text-align: center; grid-column: 1/-1;">🎂🎊🎁🎈</div>';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Floating Hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('heartsContainer').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 800);
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.message-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Music Button
+        const musicBtn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            musicBtn.classList.toggle('playing');
+            
+            if (isPlaying) {
+                musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+            }
+        });
+
+        // Sparkle Effect on Click
+        document.addEventListener('click', (e) => {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.innerHTML = '✨';
+            sparkle.style.left = e.pageX + 'px';
+            sparkle.style.top = e.pageY + 'px';
+            sparkle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add random floating hearts on page load
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 300);
+        }
+
+        // Confetti on Birthday
+        function checkBirthday() {
+            const today = new Date();
+            const birthday = new Date('2025-01-28');
+            
+            if (today.getDate() === birthday.getDate() && 
+                today.getMonth() === birthday.getMonth()) {
+                createConfetti();
+            }
+        }
+
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#c44569', '#ffa8c5', '#ffd4e5'];
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'fixed';
+                    confetti.style.width = '10px';
+                    confetti.style.height = '10px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-10px';
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.pointerEvents = 'none';
+                    confetti.style.zIndex = '9999';
+                    confetti.style.animation = 'floatHeart 5s ease-in forwards';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 30);
+            }
+        }
+
+        checkBirthday();
+    </script>
+</body>
+</html>
